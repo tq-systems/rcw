@@ -1,0 +1,7 @@
+/*
+ * Configure Alternate space
+ */
+.pbi
+write 0x570158, 0x00001000
+write 0x610000, 0x0000000
+.end
