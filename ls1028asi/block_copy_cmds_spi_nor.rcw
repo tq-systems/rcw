@@ -1,0 +1,7 @@
+/*
+ * Copy SPL driver from SPI Nor-Flash to OCRAM.
+ */
+
+.pbi
+blockcopy 0x00,0x20100000,0x18010000,0x00015000
+.end
