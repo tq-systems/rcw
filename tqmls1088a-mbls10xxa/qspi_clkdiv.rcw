@@ -1,0 +1,7 @@
+/*
+ * Set QSPI clock divider to 24
+ */
+ 
+.pbi
+write 0x01e00900,0x00000006
+.end
