@@ -76,7 +76,7 @@ SRDS_PRTCL_S1_L2=11
 SRDS_PRTCL_S1_L3=11
 SRDS_PLL_REF_CLK_SEL_S1=0
 SRDS_DIV_PEX_S1=0
-SRDS_S1_REFCLK_SRC_SEL=0
+SRDS_S1_REFCLK_SRC_SEL=3
 
 /* Boot Location Pointer */
 #include <../ls1028asi/bootlocptr_sdhc.rcw>
