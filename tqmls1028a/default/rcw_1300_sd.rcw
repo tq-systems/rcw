@@ -35,7 +35,7 @@ BOOT_LOC=21
 BOOT_HO=0
 SB_EN=0
 FLASH_CFG1=3
-PBI_LENGTH=10
+PBI_LENGTH=22
 SDBGEN=0
 SYSCLK_FREQ=600
 GPIO_LED_NUM=0
@@ -78,10 +78,37 @@ SRDS_PLL_REF_CLK_SEL_S1=0
 SRDS_DIV_PEX_S1=0
 SRDS_S1_REFCLK_SRC_SEL=3
 
+.pbi
+/* 00 */
 /* Boot Location Pointer */
-#include <bootlocptr.rcw>
+write 0x01e00400,0x18010000
+/* 08 */
+write 0x01e00404,0x00000000
 
-/* Copy SPL to OCRAM */
-#include <block_copy_cmds_sdhc.rcw>
+/* 10 */
+/* Load POR status register 1, mask RCW_SRC */
+loadcondition 0x1e00000,0x07800000
 
+/* 1c */
+/* Jump to 0x40 if RCW_SRC == SD card */
+jumpconditional 0x24, 0x04000000
 
+/* 28 */
+/* Load bootloader from eMMC */
+blockcopy 0x09,0x00100000,0x18010000,0x00015000
+
+/* 38 */
+/* Jump to 0x50 */
+jump 0x18
+
+/* 40 */
+/* Load bootlaoder from SD card */
+blockcopy 0x08,0x00100000,0x18010000,0x00015000
+
+/* 50 */
+/* Stop instruction */
+
+/* 58 */
+/* Total word count: 0x58 / 4 = 22 */
+
+.end

@@ -78,7 +78,20 @@ SRDS_PLL_REF_CLK_SEL_S1=0
 SRDS_DIV_PEX_S1=0
 SRDS_S1_REFCLK_SRC_SEL=3
 
+.pbi
+/* 00 */
 /* Boot Location Pointer */
-#include <bootlocptr.rcw>
+write 0x01e00400,0x18010000
+/* 08 */
+write 0x01e00404,0x00000000
 
-#include <block_copy_cmds_spi_nor.rcw>
+/* 10 */
+/* Load bootloader from SPI-NOR */
+blockcopy 0x00,0x20100000,0x18010000,0x00015000
+
+/* 20 */
+/* Stop instruction */
+
+/* 28 */
+/* Total word count: 0x28 / 4 = 10 */
+.end
