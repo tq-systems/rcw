@@ -1,0 +1,6 @@
+tqmls1021a
+==========
+
+Available configurations:
+
+- default: MBLS102xA configuration (SERDES 0x70: PCIe1 / SATA1 / PCIe2 / SGMII2)

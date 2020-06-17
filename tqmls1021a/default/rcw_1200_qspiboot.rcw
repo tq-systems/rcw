@@ -3,7 +3,7 @@
  *
  */
 
-#include <ls1021a.rcwi>
+#include <../ls1021aqds/ls1021a.rcwi>
 
 SYS_PLL_RAT=3
 MEM_PLL_RAT=8
@@ -56,10 +56,7 @@ write 0x57015c, 0x00000803
 write 0xee0200, 0x40010000
 .end
 
-#include <scfg_bit_reverse.rcw>
-#include <io_drive_strenth.rcw>
-#include <configure_altspace.rcw>
-
-.pbi
-write 0x6100c0, 0x00000000
-.end
+#include <../ls1021aqds/scfg_bit_reverse.rcw>
+#include <../ls1021aqds/io_drive_strength.rcw>
+#include <../ls1021aqds/pcie_hotplug_status_clear.rcw>
+#include <../ls1021aqds/qspi_endianness.rcw>

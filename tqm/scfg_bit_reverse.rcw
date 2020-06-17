@@ -1,8 +1,0 @@
-/*
- * PBI Commands for TQMLS102xa
- */
-
-.pbi
-/* set SCFG bit reverse */
-write 0x570200, 0xffffffff
-.end
