@@ -23,7 +23,6 @@ DRAM_LAT=1
 DDR_RATE=1
 BOOT_LOC=24
 FLASH_MODE=2
-PBI_LENGTH=32
 SDBGEN=1
 SYSCLK_FREQ=600
 UART_BASE=3
@@ -48,3 +47,5 @@ SRDS_PRTCL_S2=63
 
 /* Errata for PCIe Gen3 */
 #include <../ls2088asi/a008851_N_0x3f.rcw>
+
+#include <../ls2088asi/a009531.rcw>

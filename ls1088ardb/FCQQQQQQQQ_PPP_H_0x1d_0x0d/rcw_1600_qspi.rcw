@@ -10,7 +10,6 @@ DDR_REFCLK_SEL=2
 DRAM_LAT=1
 BOOT_LOC=26
 FLASH_MODE=0x2
-PBI_LENGTH=0xa
 SYSCLK_FREQ=0x258
 IIC3_EXT=1
 UART_BASE=3
@@ -38,4 +37,5 @@ SRDS_DIV_PEX_S2=1
 #include <bootlocptr_qspi.rcw>
 #include <a009102_single.rcw>
 #include <a010554_single.rcw>
+#include <a009531.rcw>
 /* CRC and Stop command (CRC 0xe09d8c9a)*/

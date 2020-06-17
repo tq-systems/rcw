@@ -65,6 +65,9 @@
 
 #include <../ls1046ardb/ls1046a.rcwi>
 
+%littleendian64b=1
+%dont64bswapcrc=1
+
 SYS_PLL_RAT=6
 MEM_PLL_RAT=21
 CGA_PLL1_RAT=16
@@ -105,8 +108,5 @@ write 0x570604, 0x40010000
 #include <../ls1046ardb/cci_barrier_disable.rcw>
 #include <../ls1046ardb/usb_phy_freq.rcw>
 #include <../ls1046ardb/serdes_sata.rcw>
-
-.pbi
-// QSPI END_CFG 64 bit LE
-write 0x550000, 0x000f400c
-.end
+#include <../ls1046ardb/a009531.rcw>
+#include <../ls1046ardb/qspi_endianness.rcw>

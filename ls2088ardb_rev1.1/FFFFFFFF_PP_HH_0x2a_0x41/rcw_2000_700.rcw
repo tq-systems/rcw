@@ -22,7 +22,6 @@ DRAM_LAT=1
 DDR_RATE=1
 BOOT_LOC=24
 FLASH_MODE=2
-PBI_LENGTH=16
 SDBGEN=1
 SYSCLK_FREQ=600
 UART_BASE=3
@@ -46,3 +45,4 @@ SRDS_DIV_PEX_S2=1
 /* Errata for SATA controller */
 #include <../ls2088asi/a010554.rcw>
 
+#include <../ls2088asi/a009531.rcw>

@@ -65,3 +65,15 @@ For example,
   rcw_2000_700_2400_19_5_2.rcw means rcw for core frequency 2000MHz, Platform frequecny 700MHz and DDR Memory Data Rate as 2400 MT/s, with serdes1=19 serdes2=5 serdes3=2.
   rcw_2000_19_5_2_sd.rcw means rcw for core frequency of 2000MHz with SD boot, with serdes1=19 serdes2=5 serdes3=2.
 
+Errata Workaround Implemented
+=============================
+A-011270:
+	Software will read incorrect Function Dependency List for PF1
+	Workaround: Set FDL field in the SRIOV_FDL_DEVICE_ID1 to 0x1
+
+A-050234:
+	The default configuration of the elastic buffer thresholds in the PCI
+	Express controller is not optimal and can cause various link errors.
+	Workaround:
+	For Gen1 & Gen2, write 0x2008_1004 to PEXnCR0
+	For Gen3, write 0x0008_1004 to PEXnCR1

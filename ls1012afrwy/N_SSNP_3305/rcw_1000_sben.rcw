@@ -21,6 +21,9 @@
 
 #include <ls1012a.rcwi>
 
+%littleendian64b=1
+%dont64bswapcrc=1
+
 SYS_PLL_RAT=4
 CGA_PLL1_RAT=10
 SRDS_PRTCL_S1=13061
@@ -60,3 +63,4 @@ SYSCLK_FREQ=600
 #include <clock_out.rcw>
 #include <secure_boot.rcw>
 #include <qspi_endianness.rcw>
+#include <../ls1012ardb/a009531.rcw>

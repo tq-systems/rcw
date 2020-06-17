@@ -36,6 +36,9 @@
 
 #include <ls1043a.rcwi>
 
+%littleendian64b=1
+%dont64bswapcrc=1
+
 SYS_PLL_RAT=4
 MEM_PLL_RAT=16
 CGA_PLL1_RAT=15
@@ -75,3 +78,4 @@ write 0x570604, 0x40100000
 #include <dcsr_mbist.rcw>
 #include <serdes_sata.rcw>
 #include <pex_gen3_link.rcw>
+#include <qspi_endianness.rcw>

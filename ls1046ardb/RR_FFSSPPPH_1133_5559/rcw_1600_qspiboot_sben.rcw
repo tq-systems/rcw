@@ -65,6 +65,9 @@
 
 #include <ls1046a.rcwi>
 
+%littleendian64b=1
+%dont64bswapcrc=1
+
 SYS_PLL_RAT=6
 MEM_PLL_RAT=21
 CGA_PLL1_RAT=16
@@ -98,17 +101,13 @@ SYSCLK_FREQ=600
 HWA_CGA_M2_CLK_SEL=1
 
 .pbi
-// QSPI flash clock
-write 0x57015c, 0x20100000
 // U-boot header address
 write 0xee0200, 0x406c0000
 .end
 
+#include <qspi_speed.rcw>
 #include <cci_barrier_disable.rcw>
 #include <usb_phy_freq.rcw>
 #include <serdes_sata.rcw>
-
-.pbi
-// QSPI END_CFG 64 bit LE
-write 0x550000, 0x000f400c
-.end
+#include <a009531.rcw>
+#include <qspi_endianness.rcw>
