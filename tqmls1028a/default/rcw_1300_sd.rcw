@@ -81,7 +81,7 @@ SRDS_S1_REFCLK_SRC_SEL=3
 .pbi
 /* 00 */
 /* Boot Location Pointer */
-write 0x01e00400,0x18010000
+write 0x01e00400,0x1800D000
 /* 08 */
 write 0x01e00404,0x00000000
 
@@ -94,16 +94,16 @@ loadcondition 0x1e00000,0x07800000
 jumpconditional 0x24, 0x04000000
 
 /* 28 */
-/* Load bootloader from eMMC */
-blockcopy 0x09,0x00100000,0x18010000,0x00015000
+/* Load BL2 from eMMC */
+blockcopy 0x09,0x0000a000,0x1800D000,0x00020000
 
 /* 38 */
 /* Jump to 0x50 */
 jump 0x18
 
 /* 40 */
-/* Load bootlaoder from SD card */
-blockcopy 0x08,0x00100000,0x18010000,0x00015000
+/* Load BL2 from SD card */
+blockcopy 0x08,0x0000a000,0x1800D000,0x00020000
 
 /* 50 */
 /* Stop instruction */

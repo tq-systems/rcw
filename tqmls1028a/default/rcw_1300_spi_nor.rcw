@@ -81,13 +81,13 @@ SRDS_S1_REFCLK_SRC_SEL=3
 .pbi
 /* 00 */
 /* Boot Location Pointer */
-write 0x01e00400,0x18010000
+write 0x01e00400,0x1800D000
 /* 08 */
 write 0x01e00404,0x00000000
 
 /* 10 */
 /* Load bootloader from SPI-NOR */
-blockcopy 0x00,0x20100000,0x18010000,0x00015000
+blockcopy 0x00,0x20009000,0x1800D000,0x00020000
 
 /* 20 */
 /* Stop instruction */
