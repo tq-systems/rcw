@@ -1,0 +1,6 @@
+tqmls1012al
+===========
+
+Available configurations:
+
+- default: MBLS1012AL configuration (SERDES 0x3508: SGMII1 / PCIe / unused / SATA / RGMII2)
