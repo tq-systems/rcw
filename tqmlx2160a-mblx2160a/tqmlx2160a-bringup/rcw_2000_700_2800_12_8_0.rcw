@@ -6,7 +6,7 @@
  * Frequencies:
  * Core     -- 2000 MHz
  * Platform -- 700  MHz
- * DDR      -- 2400 MT/s
+ * DDR      -- 2800 MT/s
  */
 
 #include <../lx2160asi/lx2160a.rcwi>
