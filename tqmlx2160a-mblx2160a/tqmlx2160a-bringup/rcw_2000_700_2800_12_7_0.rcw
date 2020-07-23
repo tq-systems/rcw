@@ -1,6 +1,6 @@
 /*
  * SerDes Protocol 1 -12
- * SerDes Protocol 2 - 8
+ * SerDes Protocol 2 - 7
  * SerDes Protocol 3 - 0
  */
 
@@ -13,7 +13,7 @@ SRDS_PLL_PD_PLL4=0
 SRDS_PLL_PD_PLL5=1
 SRDS_PLL_PD_PLL6=1
 SRDS_PRTCL_S1=12
-SRDS_PRTCL_S2=8
+SRDS_PRTCL_S2=7
 SRDS_PRTCL_S3=0
 SRDS_REFCLKF_DIS_S1=0
 SRDS_REFCLKF_DIS_S2=0
