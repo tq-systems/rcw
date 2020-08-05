@@ -46,7 +46,8 @@ RESET_REQ_PMUX=1
 IIC1_PMUX=0
 USB3_CLK_FSEL=39
 
-/* common PBI commands */
+/* LX2160a common PBI commands */
 #include <../lx2160asi/common.rcw>
 
+/* TQMLX2160a common PBI commands */
 #include <./common.rcwi>
