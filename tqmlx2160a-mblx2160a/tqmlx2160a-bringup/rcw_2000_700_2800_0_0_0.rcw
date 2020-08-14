@@ -1,9 +1,3 @@
-/*
- * SerDes Protocol 1 - 0
- * SerDes Protocol 2 - 0
- * SerDes Protocol 3 - 0
- */
-
 #include <tqmlx2160a-bringup/rcw_2000_700_2800_common.rcwi>
 
 SRDS_PLL_PD_PLL1=1
