@@ -7,7 +7,7 @@
 
 #include <../lx2160asi/lx2160a.rcwi>
 
-SYS_PLL_RAT=14
+SYS_PLL_RAT=15
 MEM_PLL_CFG=3
 MEM_PLL_RAT=28
 MEM2_PLL_CFG=3
