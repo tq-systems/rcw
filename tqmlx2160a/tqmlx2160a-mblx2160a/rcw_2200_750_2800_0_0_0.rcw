@@ -1,4 +1,4 @@
-#include <tqmlx2160a-mblx2160a/rcw_2000_700_2800_common.rcwi>
+#include <tqmlx2160a-mblx2160a/rcw_2200_750_2800_common.rcwi>
 
 SRDS_PLL_PD_PLL1=1
 SRDS_PLL_PD_PLL2=1
