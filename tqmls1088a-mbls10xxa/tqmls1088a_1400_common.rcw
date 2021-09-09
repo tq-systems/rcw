@@ -1,0 +1,40 @@
+/*
+ * TQMLS1088A RCW basics for 1400MHz Core clock
+ *
+ * Frequencies:
+ *
+ * Sys Clock:    100 MHz
+ * DDR_Refclock: 100 MHz
+ *
+ * Core		-- 1400 MHz (Mul 14)
+ * Platform	-- 600 MHz (Mul 6)
+ * DDR		-- 1800 MT/s (Mul 18)
+ */
+#include <ls1088a.rcwi>
+
+SYS_PLL_RAT=6
+MEM_PLL_RAT=18
+CGA_PLL1_RAT=14
+CGA_PLL2_RAT=14
+HWA_CGA_M1_CLK_SEL=1
+HWA_CGA_M2_CLK_SEL=2
+DDR_REFCLK_SEL=2
+DRAM_LAT=1
+SYSCLK_FREQ=0x258
+UART_BASE=2
+IIC3_BASE=1
+IFC_GRP_A_BASE=3
+IFC_GRP_E_BASE=2
+IFC_GRP_FGHI_BASE=3
+USB=1
+USB1_CLK_FSEL=0x27
+USB2_CLK_FSEL=0x27
+
+/* PBI_LENGTH is calculated during build */
+
+#include <qspi_clkdiv.rcw>
+#include <a009102_single.rcw>
+#include <a010554_single.rcw>
+#include <a008851.rcw>
+#include <a008822.rcw>
+
