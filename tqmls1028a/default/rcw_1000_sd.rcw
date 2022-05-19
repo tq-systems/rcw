@@ -1,0 +1,17 @@
+/*
+ * SerDes Protocol -  0x85bb
+ *
+ * Frequencies:
+ * Core     -- 1000 MHz
+ * Platform -- 400  MHz
+ * DDR      -- 800 MHz
+ * DDR Data Rate -- 1.600 GT/s
+ */
+
+#include <../ls1028asi/ls1028a.rcwi>
+
+#include "rcw_common.rcwi"
+
+CGA_PLL1_RAT=10
+
+#include "pbl_sd.rcwi"
