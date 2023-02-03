@@ -1,0 +1,31 @@
+#include <../ls1043aqds/ls1043a.rcwi>
+
+SYS_PLL_RAT=3
+MEM_PLL_RAT=16
+CGA_PLL1_RAT=10
+CGA_PLL2_RAT=10
+FM1_MAC_RAT=1
+SRDS_PLL_REF_CLK_SEL_S1=3
+SRDS_DIV_PEX=1
+DDR_FDBK_MULT=2
+PBI_SRC=4
+IFC_MODE=37
+HWA_CGA_M1_CLK_SEL=6
+DRAM_LAT=1
+SYS_PLL_SPD=1
+UART_BASE=6
+IRQ_OUT=1
+IFC_GRP_A_EXT=1
+IFC_GRP_F_EXT=1
+EMI2_DMODE=1
+TVDD_VSEL=1
+DVDD_VSEL=2
+EMI1_DMODE=1
+IIC2_EXT=2
+SYSCLK_FREQ=0x258
+HWA_CGA_M2_CLK_SEL=1
+
+#include <../ls1043aqds/cci_barrier_disable.rcw>
+#include <../ls1043aqds/a009929.rcw>
+#include <usb_phy_freq.rcwi>
+#include <../ls1043aqds/a009859.rcw>

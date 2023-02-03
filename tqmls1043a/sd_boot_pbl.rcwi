@@ -1,0 +1,4 @@
+PBI_SRC=6
+IFC_MODE=0x40
+
+#include <../ls1043aqds/atf_address.rcw>

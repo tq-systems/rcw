@@ -1,0 +1,15 @@
+tqmls1043a
+==========
+
+Available configurations:
+
+- Core Clock 1000MHz
+- SerDes Configurations:
+  - 0x1355
+  - 0x1455
+  - 0x3335
+  - 0x3355
+  - 0x3358
+- Boot Source:
+  - SD (MMC)
+  - QSPI
