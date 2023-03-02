@@ -1,0 +1,11 @@
+PBI_SRC=6
+IFC_MODE=0x40
+
+.pbi
+// Set the BOOTLOCPTR
+write 0x570600, 0x00000000
+write 0x570604, 0x10000000
+// Alt base register
+write 0x570158, 0x00001000
+flush
+.end

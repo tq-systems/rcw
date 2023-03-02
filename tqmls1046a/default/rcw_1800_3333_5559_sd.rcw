@@ -1,0 +1,6 @@
+#include <tqmls1046a_common.rcwi>
+
+SRDS_PRTCL_S1=0x3333
+SRDS_PRTCL_S2=0x5559
+
+#include <sd_boot_pbl.rcwi>

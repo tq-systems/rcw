@@ -1,0 +1,15 @@
+%littleendian64b=1
+%dont64bswapcrc=1
+
+PBI_SRC=4
+IFC_MODE=37
+
+
+.pbi
+// Set the BOOTLOCPTR
+write 0x570600, 0x00000000
+write 0x570604, 0x40100000
+.end
+
+#include <../ls1046ardb/qspi_divisor_20.rcw>
+#include <../ls1046ardb/qspi_endianness.rcw>

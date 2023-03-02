@@ -1,0 +1,8 @@
+/*
+ *  SCFG_USB_REFCLK_SELCR[1-3]: FSEL 100MHz, CLKSEL: 00 SYSCLK
+ */
+.pbi
+write 0x570418, 0x0000009c
+write 0x57041c, 0x0000009c
+write 0x570420, 0x0000009c
+.end
