@@ -6,7 +6,7 @@
  * boot from hardwareROM/bootROM will happen at default speed, but once QSPI driver is init
  * increased speed can be observed.
  *
- * Top 4-bts are for CLK_SEL
+ * Top 4-bits are for CLK_SEL
  * These bits control the division of CGA1/CGA2 PLL clock to generate QuadSPI interface clocks.
  * 0000 Divide by 256
  * 0001 Divide by 64 (default) as per RM
@@ -16,7 +16,22 @@
  * 0101 Divide by 16
  * 0110 Divide by 12
  * 0111 Divide by 8
+ *
+ * ----------------------------------------------
+ * |Core Freq(Mhz)	| QSPI Freq(with divisor 24)|
+ * ----------------------------------------------
+ * |          800	|		33.33Mhz			|
+ * ----------------------------------------------
+ * |          1200	|		50Mhz				|
+ * ----------------------------------------------
+ * |          1400	|		58.33Mhz			|
+ * ----------------------------------------------
+ * |          1600	|		66.66Mhz			|
+ * ----------------------------------------------
+ * |          1800	|		75Mhz				|
+ * ----------------------------------------------
  */
+
 .pbi
 write 0x57015C, 0x30100000
 .end

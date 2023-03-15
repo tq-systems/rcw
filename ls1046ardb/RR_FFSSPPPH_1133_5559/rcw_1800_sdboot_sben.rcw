@@ -98,7 +98,7 @@ SYSCLK_FREQ=600
 HWA_CGA_M2_CLK_SEL=1
 
 .pbi
-// QSPI flash clock
+// Set the BOOTLOCPTR
 write 0x570600, 0x00000000
 write 0x570604, 0x10000000
 .end
@@ -106,12 +106,12 @@ write 0x570604, 0x10000000
 #include <cci_barrier_disable.rcw>
 #include <usb_phy_freq.rcw>
 #include <serdes_sata.rcw>
-#include <pex_gen3_link.rcw>
 #include <a009531.rcw>
 
 .pbi
 // Alt base register
 write 0x570158, 0x00001000
+flush
 .end
 
 .pbi

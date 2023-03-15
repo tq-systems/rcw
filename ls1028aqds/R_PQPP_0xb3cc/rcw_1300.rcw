@@ -29,11 +29,8 @@ IIC4_PMUX=2
 IIC5_PMUX=1
 IIC6_PMUX=3
 CLK_OUT_PMUX=2
-EC1_SAI4_5_PMUX=5
-EC1_SAI3_6_PMUX=5
 USB3_CLK_FSEL=39
 ENETC_RCW=3
-GTX_CLK125_PMUX=2
 SRDS_PRTCL_S1_L0=11
 SRDS_PRTCL_S1_L1=3
 SRDS_PRTCL_S1_L2=12
@@ -41,7 +38,9 @@ SRDS_PRTCL_S1_L3=12
 SRDS_DIV_PEX_S1=2
 
 /* Errata for PCIe controller */
-#include <../ls1028asi/pex_gen3_link_ls1028a.rcw>
+#include <../ls1028asi/a008851.rcw>
+#include <../ls1028asi/a010477.rcw>
+#include <../ls1028asi/a009531.rcw>
 
 /* Increase FSPI clock frequency */
 #include <../ls1028asi/fspi_speed.rcw>
