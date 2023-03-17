@@ -10,7 +10,10 @@
  * Platform	-- 600 MHz (Mul 6)
  * DDR		-- 1800 MT/s (Mul 18)
  */
-#include <ls1088a.rcwi>
+#include <../ls1088ardb/ls1088rdb.rcwi>
+
+//Due to Errata A-010160 crc command can't be used on non-secure devices
+%nocrc=1
 
 SYS_PLL_RAT=6
 MEM_PLL_RAT=18
@@ -33,8 +36,7 @@ USB2_CLK_FSEL=0x27
 /* PBI_LENGTH is calculated during build */
 
 #include <qspi_clkdiv.rcw>
-#include <a009102_single.rcw>
-#include <a010554_single.rcw>
-#include <a008851.rcw>
-#include <a008822.rcw>
-
+#include <../ls1088ardb/a009102_single.rcw>
+#include <../ls1088ardb/a010554_single.rcw>
+#include <../ls1088ardb/a008851.rcw>
+#include <../ls1088ardb/a010477.rcw>
