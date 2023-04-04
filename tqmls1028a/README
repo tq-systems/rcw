@@ -4,3 +4,11 @@ tqmls1028a
 Available configurations:
 
 - default: MBLS1028A configuration (SERDES 0x85BE: SGMII / QSGMII / PCIe2 / SATA)
+
+RCW variants:
+
+"rcw_800", "rcw_1000" and "rcw_1300" set the CPU core clock to
+800/1000/1300 MHz, respectively. The correct RCW needs to be selected
+depending on the maximum supported clock rate of the used LS1028A variant.
+
+RCW variants with "sben" suffix are used for Secure Boot.

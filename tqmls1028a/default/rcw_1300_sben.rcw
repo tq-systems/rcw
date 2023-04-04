@@ -1,0 +1,15 @@
+/*
+ * SerDes Protocol -  0x85bb
+ *
+ * Frequencies:
+ * Core     -- 1300 MHz
+ * Platform -- 400  MHz
+ * DDR      -- 800 MHz
+ * DDR Data Rate -- 1.600 GT/s
+ *
+ * Secure Boot Enabled
+ */
+
+#include "rcw_1300.rcw"
+
+SB_EN=1
