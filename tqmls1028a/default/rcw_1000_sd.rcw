@@ -13,5 +13,3 @@
 #include "rcw_common.rcwi"
 
 CGA_PLL1_RAT=10
-
-#include "pbl_sd.rcwi"
