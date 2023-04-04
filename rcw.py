@@ -71,17 +71,6 @@
 #   poll[.long]     -- LS2 family PBI, three args
 #   blockcopy       -- LS2 family PBI, four args
 #
-#   -- LS2 family PBI, load from address <a> and mask with <m>
-#   loadcondition <a>, <m>
-#
-#   -- LS2 family PBI, jump to byte offset <o>. Offset is relative to
-#   -- beginning of jump instruction
-#   jump <o>
-#
-#   -- LS2 family PBI, jump to byte offset <o> if <v> equals loaded and masked
-#   -- value from previous cond command
-#   jumpconditional <o>, <v>
-#
 # Terminate the PBI section with ".end".
 #
 # The C pre-processor is invoked prior to parsing the source file.  This allows
@@ -434,43 +423,6 @@ def build_pbi(lines):
             subsection += v2
             subsection += v3
             subsection += v4
-        elif op == 'loadcondition':
-            if pbiformat != 2:
-                print('Error: "loadcondition" not supported for old PBI format')
-                return ''
-            if p1 == None or p2 == None:
-                print('Error: "loadcondition" instruction requires two parameters')
-                return ''
-            v1 = struct.pack(endianess + 'L', 0x80140000)
-            v2 = struct.pack(endianess + 'L', p1)
-            v3 = struct.pack(endianess + 'L', p2)
-            subsection += v1
-            subsection += v2
-            subsection += v3
-        elif op == 'jump':
-            if pbiformat != 2:
-                print('Error: "jump" not supported for old PBI format')
-                return ''
-            if p1 == None:
-                print('Error: "jump" instruction requires one parameter')
-                return ''
-            v1 = struct.pack(endianess + 'L', 0x80840000)
-            v2 = struct.pack(endianess + 'L', p1)
-            subsection += v1
-            subsection += v2
-        elif op == 'jumpconditional':
-            if pbiformat != 2:
-                print('Error: "jumpconditional" not supported for old PBI format')
-                return ''
-            if p1 == None or p2 == None:
-                print('Error: "jumpconditional" instruction requires two parameters')
-                return ''
-            v1 = struct.pack(endianess + 'L', 0x80850000)
-            v2 = struct.pack(endianess + 'L', p1)
-            v3 = struct.pack(endianess + 'L', p2)
-            subsection += v1
-            subsection += v2
-            subsection += v3
         elif op == 'flush':
             subsection += struct.pack('>LL', 0x09000000 | (int(vars['pbladdr'], 16) & 0x00ffff00), 0)
         else:
@@ -1004,15 +956,9 @@ def create_source():
                     elif cmd == 0x82:
                         source += "wait 0x%08x\n" % (word & 0xffff)
                     elif cmd == 0x84:
-                        arg1 = struct.unpack(endianess + 'L', pbi[i:i+4])[0]
-                        i += 4
-                        source += "jump 0x%08x\n" % (arg1)
+                        source += "/* Disassemble not implemented for word 0x%08x */\n" % (word)
                     elif cmd == 0x85:
-                        arg1 = struct.unpack(endianess + 'L', pbi[i:i+4])[0]
-                        i += 4
-                        arg2 = struct.unpack(endianess + 'L', pbi[i:i+4])[0]
-                        i += 4
-                        source += "jumpconditional 0x%08x,0x%08x\n" % (arg1, arg2)
+                        source += "/* Disassemble not implemented for word 0x%08x */\n" % (word)
                     elif cmd == 0x8f:
                         arg1 = struct.unpack(endianess + 'L', pbi[i:i+4])[0]
                         i += 4
