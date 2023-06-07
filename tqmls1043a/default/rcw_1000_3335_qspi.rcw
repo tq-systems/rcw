@@ -1,3 +1,4 @@
+/* SPDX-License-Identifier:     BSD-3-Clause */
 #include <tqmls1043a_common.rcwi>
 
 SRDS_PRTCL_S1=0x3335

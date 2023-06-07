@@ -1,3 +1,4 @@
+/* SPDX-License-Identifier:     BSD-3-Clause */
 #include <../ls1046ardb/ls1046a.rcwi>
 
 SYS_PLL_RAT=6

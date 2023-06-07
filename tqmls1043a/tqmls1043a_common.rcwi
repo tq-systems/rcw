@@ -1,3 +1,4 @@
+/* SPDX-License-Identifier:     BSD-3-Clause */
 #include <../ls1043aqds/ls1043a.rcwi>
 
 SYS_PLL_RAT=3

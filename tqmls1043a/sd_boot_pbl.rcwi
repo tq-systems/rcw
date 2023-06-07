@@ -1,3 +1,4 @@
+/* SPDX-License-Identifier:     BSD-3-Clause */
 PBI_SRC=6
 IFC_MODE=0x40
 

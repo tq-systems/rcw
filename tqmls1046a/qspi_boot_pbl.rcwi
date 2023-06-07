@@ -1,3 +1,4 @@
+/* SPDX-License-Identifier:     BSD-3-Clause */
 %littleendian64b=1
 %dont64bswapcrc=1
 

@@ -1,3 +1,4 @@
+/* SPDX-License-Identifier:     BSD-3-Clause */
 /*
  * Set QSPI clock divider to 24
  */
