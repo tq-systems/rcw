@@ -1,0 +1,26 @@
+.pbi
+// Initialize CPC1
+write 0x00010000,0x00200400
+flush
+wait 256
+// Configure CPC1 as 256KB SRAM
+write 0x00010100,0x00000000
+write 0x00010104,0xfffc0007
+write 0x00010f00,0x08000000
+write 0x00010000,0x80000000
+// Configure LAW for CPC1
+write 0x00000cd0,0x00000000
+write 0x00000cd4,0xfffc0000
+write 0x00000cd8,0x81000011
+// Configure alternate space
+write 0x00000010,0x00000000
+write 0x00000014,0xff000000
+write 0x00000018,0x81000000
+// Configure SPI controller
+write 0x00110000,0x80000403
+write 0x00110020,0x2d170008
+write 0x00110024,0x00100008
+write 0x00110028,0x00100008
+write 0x0011002c,0x00100008
+wait 1048575
+.end

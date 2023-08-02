@@ -1,0 +1,11 @@
+tqmt1024
+==========
+
+Available configurations:
+
+- SerDes Configurations:
+  - 0x6B
+  - 0x95
+- Boot Source:
+  - SD
+  - SPI-NOR
