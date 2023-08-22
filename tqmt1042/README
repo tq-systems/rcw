@@ -1,0 +1,12 @@
+tqmt1042
+==========
+
+Available configurations:
+
+- SerDes Configurations:
+  - 0x86
+  - 0x88
+  - 0x8e
+- Boot Source:
+  - SD
+  - NOR

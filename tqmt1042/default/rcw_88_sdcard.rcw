@@ -1,0 +1,5 @@
+#include <tqmt1042_common.rcwi>
+
+SRDS_PRTCL_S1=0x88
+
+#include <../tqmt10xx/tqmt10xx_sdcard.rcwi>
