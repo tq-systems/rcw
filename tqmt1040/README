@@ -1,0 +1,10 @@
+tqmt1040
+==========
+
+Available configurations:
+
+- SerDes Configurations:
+  - 0x66
+- Boot Source:
+  - SD
+  - NOR
