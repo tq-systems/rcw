@@ -64,3 +64,11 @@ SRDS_PRTCL_S1_L3=14
 SRDS_PLL_REF_CLK_SEL_S1=0
 SRDS_DIV_PEX_S1=0
 SRDS_S1_REFCLK_SRC_SEL=3
+
+/* Errata for SATA controller */
+#include <../ls1028asi/a010554.rcw>
+
+/* Errata for PCIe controller */
+#include <../ls1028asi/a008851.rcw>
+#include <../ls1028asi/a010477.rcw>
+#include <../ls1028asi/a009531.rcw>
