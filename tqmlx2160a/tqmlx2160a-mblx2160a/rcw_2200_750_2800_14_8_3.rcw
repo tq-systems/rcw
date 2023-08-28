@@ -17,3 +17,13 @@ SRDS_PLL_REF_CLK_SEL_S2=0
 SRDS_DIV_PEX_S1=3
 SRDS_DIV_PEX_S2=3
 SRDS_DIV_PEX_S3=3
+
+/*PCIe Errata A-009531*/
+#include <../lx2160asi/a009531_PEX2.rcw>
+#include <../lx2160asi/a009531_PEX5.rcw>
+#include <../lx2160asi/a009531_PEX6.rcw>
+
+/*PCIe Errata A-008851*/
+#include <../lx2160asi/a008851_PEX2.rcw>
+#include <../lx2160asi/a008851_PEX5.rcw>
+#include <../lx2160asi/a008851_PEX6.rcw>
