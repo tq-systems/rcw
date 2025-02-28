@@ -1,10 +1,12 @@
-tqmls1046a
-==========
+# RCW for TQMLS1046A
 
-Available configurations:
+## Available configurations:
 
-- Core Clock 1800MHz
-- SerDes Configurations:
+* Core Clock 1800MHz
+* Boot Source:
+  - SD / eMMC (eSDHC)
+  - QSPI
+* SerDes Configurations:
     SerDes 1 | SerDes 2
    ----------|----------
     0x1040   | 0x5506
@@ -23,8 +25,7 @@ Available configurations:
     0x3333   | 0x5a06
     0x3333   | 0x5a59
 
-Serdes 1:
-=========
+### SerDes 1:
 
 | SRDS_PRTCL_S1  | SD1_RX0_P/N  | SD1_RX1_P/N  | SD1_RX2_P/N     | SD1_RX3_P/N  |
 |----------------|--------------|--------------|-----------------|--------------|
@@ -32,9 +33,8 @@ Serdes 1:
 | 1133           | XFI.9        | XFI.10       | SGMII.5         | SGMII.6      |
 | 3333           | SGMII.9      | SGMII.10     | SGMII.5         | SGMII.6      |
 
-Serdes 2:
-=========
-|
+### SerDes 2:
+
 | SRDS_PRTCL_S2  | SD2_RX0_P/N  | SD2_RX1_P/N  | SD2_RX2_P/N  | SD2_RX3_P/N  |
 |----------------|--------------|--------------|--------------|--------------|
 | 5506           | PCIe.1 x1    | PCIe.2 x1    | Unused       | PCIe.3 x1    |
@@ -42,8 +42,3 @@ Serdes 2:
 | 5577           | PCIe.1 x1    | PCIe.2 x1    | PCIe.3 x2    | PCIe.3 x2    |
 | 5A06           | PCIe.1 x1    | SGMII.2      | Unused       | PCIe.3 x1    |
 | 5A59           | PCIe.1 x1    | SGMII.2      | PCIe.3 x1    | SATA         |
-
-
-- Boot Source:
-  - SD (MMC)
-  - QSPI
