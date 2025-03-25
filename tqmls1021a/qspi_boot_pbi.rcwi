@@ -1,0 +1,30 @@
+/* SPDX-License-Identifier:     BSD-3-Clause */
+
+#include <tqmls1021a_common.rcwi>
+
+/* PBI from QSPI0 */
+PBI_SRC=4
+/* IFC Mode 16bit NOR ALE4, ALE before CS */
+IFC_MODE=37
+
+.pbi
+/* configure QSPI clock (from rcw repo) */
+write 0x57015c, 0x00000803
+
+/* Configure Scratch register */
+/* set boot location pointer -> QSPI0@64K */
+write 0xee0200, 0x40010000
+.end
+
+/* apply bit reversing to all register */
+/* must be written before writen to any other SCFG reg */
+#include <../ls1021aqds/scfg_bit_reverse.rcw>
+
+/* Increase IO drive strength to avoid FCS error on RGMII ports */
+#include <../ls1021aqds/io_drive_strength.rcw>
+
+.pbi
+/* Configure alternate space */
+write  0x570158, 0x00001000
+flush
+.end

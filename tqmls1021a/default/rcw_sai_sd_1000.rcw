@@ -1,0 +1,5 @@
+#include <sd_boot_pbi.rcwi>
+
+EC1=4
+EC2=4
+EC3=0

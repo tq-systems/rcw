@@ -1,0 +1,6 @@
+#include <qspi_boot_pbi.rcwi>
+
+CGA_PLL1_RAT=12
+EC1=0
+EC2=4
+EC3=0
