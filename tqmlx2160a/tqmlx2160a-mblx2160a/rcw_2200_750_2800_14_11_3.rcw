@@ -1,5 +1,7 @@
 #include <tqmlx2160a-mblx2160a/rcw_2200_750_2800_common.rcwi>
 
+EC1_PMUX=1
+EC2_PMUX=1
 SRDS_PLL_PD_PLL1=0
 SRDS_PLL_PD_PLL2=0
 SRDS_PLL_PD_PLL3=0
