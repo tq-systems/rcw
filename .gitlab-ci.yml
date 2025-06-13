@@ -1,0 +1,23 @@
+workflow:
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event" || $CI_PIPELINE_SOURCE == "schedule" || $CI_PIPELINE_SOURCE == "web"
+
+image: "vgitlab01.tq-net.de:5005/tq-embedded/tqmaxx/toolchain-tqmaxx/yocto-base:ubuntu-20.04"
+
+stages:
+  - build
+
+build-rcw-files:
+  variables:
+    DESTDIR : "out"
+    BOARDS : "tqmls1012al tqmls1021a tqmls1028a tqmls1043a tqmls1046a tqmls1088a tqmlx2160a tqmt1024 tqmt1040 tqmt1042"
+  tags:
+    - tqmaxx
+  stage: build
+  script:
+    - echo "Create RCW files for all boards"
+    - make -j install BOARDS="${BOARDS}" DESTDIR=${DESTDIR}
+  artifacts:
+    when: on_success
+    paths:
+      - "*/${DESTDIR}"
