@@ -5,9 +5,5 @@
  * Core		-- 800 MHz (Mul 8)
  */
 #include <tqmls1012al_common.rcwi>
-
-CGA_PLL1_RAT=8
-SDHC1_CD=1
-SDHC1_WP=1
-SDHC1_VSEL=1
-EVDD_VSEL=2
+#include <tqmls1012al_800.rcwi>
+#include <tqmls1012al_sd.rcwi>
