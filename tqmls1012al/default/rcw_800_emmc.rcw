@@ -1,0 +1,13 @@
+/* SPDX-License-Identifier:     BSD-3-Clause */
+/*
+ * See tqmls1012al_common.rcwi for other settings
+ *
+ * Core		-- 800 MHz (Mul 8)
+ */
+#include <tqmls1012al_common.rcwi>
+
+CGA_PLL1_RAT=8
+SDHC1_CD=0
+SDHC1_WP=0
+SDHC1_VSEL=0
+EVDD_VSEL=0
