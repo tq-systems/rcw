@@ -1,7 +1,3 @@
 RCWs for the TQMLX2160a:
 
 At the moment different Serdes Configurations are provided.
-
-Each configuration also has an "sben" variant that allows to enable Secure Boot
-for development setups (that is, without closing the device by programming the
-"ITS" fuse).
