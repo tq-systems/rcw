@@ -1,0 +1,8 @@
+/* SPDX-License-Identifier:     BSD-3-Clause */
+
+#include <tqmls1028a.rcwi>
+
+SRDS_PRTCL_S1_L0=8
+SRDS_PRTCL_S1_L1=5
+SRDS_PRTCL_S1_L2=11
+SRDS_PRTCL_S1_L3=11
