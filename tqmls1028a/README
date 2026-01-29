@@ -3,7 +3,7 @@ tqmls1028a
 
 Available configurations:
 
-- default: MBLS1028A configuration (SERDES 0x85BE: SGMII / QSGMII / PCIe2 / SATA)
+- 8_5_11_14: MBLS1028A configuration (SERDES 0x85BE: SGMII / QSGMII / PCIe2 Gen2 / SATA)
 
 RCW variants:
 

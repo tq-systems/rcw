@@ -1,16 +1,14 @@
 /* SPDX-License-Identifier:     BSD-3-Clause */
 /*
- * SerDes Protocol -  0x85bb
+ * SerDes Protocol -  0x85be
  *
  * Frequencies:
- * Core     -- 1000 MHz
+ * Core     -- 1300 MHz
  * Platform -- 400  MHz
  * DDR      -- 800 MHz
  * DDR Data Rate -- 1.600 GT/s
  */
 
-#include <../ls1028asi/ls1028a.rcwi>
+#include "rcw_8_5_11_14.rcwi"
 
-#include "rcw_common.rcwi"
-
-CGA_PLL1_RAT=10
+CGA_PLL1_RAT=13
